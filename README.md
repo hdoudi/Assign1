@@ -1,6 +1,9 @@
 #User will input name
+
 Name = input("What's the customer's name?:")
+
 #User will choose drink and then input
+
 Drink = input("Would you like Coffee or Tea?:")
 
 if Drink.lower() == 'tea' or Drink.lower() == 't':
@@ -10,7 +13,9 @@ elif Drink.lower() == 'coffee' or Drink.lower() == 'c':
 else:
     print('invalid input')
     exit ()
+
 #User will decide which drink size they would like and then input
+
 Size = input("Would you like a Small, Medium, or Large?:")
 
 SmallPrice = float(1.50)
@@ -30,7 +35,8 @@ else:
 #User will choose which flavor drink they would like and then input
 #.lower() allows user to input any combination of lower case and upper case letters and allow the input to process correctly
 #if statement allows user to choose which flavor an drink inout smoothly
-Flavor = input("What flavor would you like?:")
+
+Flavor = input("What flavor would you like? We have chocolate, vanilla, maple, or none for coffee, and lemon, mint, or none for tea.:")
 if Drink == 'coffee' or Drink == 'Coffee' or Drink.lower() == 'c':
     if Flavor.lower() == 'vanilla' or Flavor.lower() == 'v':
         VanillaPrice = 0.25
@@ -47,6 +53,7 @@ if Drink == 'coffee' or Drink == 'Coffee' or Drink.lower() == 'c':
     else:
         print('invalid input')
         exit()
+        
 if Drink == 'tea' or Drink == 'Tea' or Drink.lower() == 't':
     if Flavor.lower() == 'lemon' or Flavor.lower() == 'l':
         LemonPrice = 0.25
@@ -65,6 +72,7 @@ tax = 1.11
 TotalCost = 0
 
 #time to calculate the Total Cost of all the different order variations for coffee
+
 if Drink == 'coffee' or Drink == 'Coffee' or Drink.lower() == 'c':
     if Flavor.lower() == 'chocolate' or Flavor.lower() == 'c':
         if(Size.lower() =='s' or Size == 'small' or Size == 'Small'):
@@ -94,7 +102,9 @@ if Drink == 'coffee' or Drink == 'Coffee' or Drink.lower() == 'c':
             TotalCost = (NonePrice + MediumPrice)*tax
         elif(Size.lower() == 'l' or Size == 'large' or Size == 'Large'):
             TotalCost = (NonePrice + LargePrice)*tax
+            
 #Time to calculate the total cost and all the different variations available for tea
+
 if Drink == 'tea' or Drink == 'Tea' or Drink.lower() == 't':
     if Flavor.lower() == 'mint' or Flavor.lower() == 'm':
         if(Size.lower() == 's' or Size == 'small' or Size == 'Small'):
